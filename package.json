@@ -1,0 +1,52 @@
+{
+  "name": "nwjs-react-menorca",
+  "version": "0.1.0",
+  "private": true,
+  "main": "./public/main.js",
+  "homepage": ".",
+  "chromium-args": "--mixed-context",
+  "node-remote": "http://localhost:3000",
+  "build": {
+    "nwVersion": "0.39.3"
+  },
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "nw": "^0.47.1-sdk",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "nwjs-dev": "concurrently \"set BROWSER=none&&yarn start\" \"wait-on http://localhost:3000 &&set NWJS_START_URL=http://localhost:3000&&nw .\" ",
+    "nwjs-reactbuild": "nw .",
+    "prenwjs-reactbuild": "yarn build",
+    "nwjs-pack": "build --tasks win-x86,win-x64,linux-x86,linux-x64,mac-x64 --mirror https://dl.nwjs.io/ .",
+    "prenwjs-pack": "yarn build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "nwjs-builder-phoenix": "^1.15.0",
+    "wait-on": "^5.1.0"
+  }
+}
