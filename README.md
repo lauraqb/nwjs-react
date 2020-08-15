@@ -31,35 +31,50 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
      yarn nwjs-pack
     ```
 
-# TUTORIAL
-## Installation in a new project
-- Seguir este tutorial: https://www.onbirkod.com/how-to-build-an-nw-js-app-using-create-react-app/
-- Install: 
-    ```bash 
-    npm i nw@sdk --save 
-    ```
-    ```bash 
-    npm i concurrently --dev
-    ```
-    ```bash 
-    npm i wait-on --dev
-    ```
-- Create a main.js file under the public directory:
+# Installation Guide
 
-    ```
-    const startUrl = process.env.NWJS_START_URL || '../build/index.html';
-    nw.Window.open(startUrl, {}, function(win) {});
-    ```
+- Install:
+  ```
+  npm i nw@sdk --save
+  ```
+  ```
+  npm i concurrently --dev
+  ```
+  ```
+  npm i wait-on --dev
+  ```
+- Install for Packaging the NW.js App
+  ```
+  npm install nwjs-builder-phoenix --save-dev
+  ```
+- Create a main.js file under the src directory:
+
+  ```
+  const startUrl = process.env.NWJS_START_URL || '../build/index.html';
+  nw.Window.open(startUrl, {}, function(win) {});
+  ```
+
 - Modify package.json file an add:
-    ```
-    {
-        ...
-        "main": "./public/main.js", 
-        "scripts": {
-            ...
-            "nwjs-dev": "concurrently \"set BROWSER=none&&yarn start\" \"wait-on http://localhost:3000 &&set NWJS_START_URL=http://localhost:3000&&nw .\" ",
 
-    },
-    ```
+  ```
+  {
+      ...
+      "main": "./src/main.js",
+      "homepage":".",
+      "build": {
+          "nwVersion": "0.47.1" /* <- we need to specify a NW.js version to be used on build process */
+      },
+      "scripts": {
+          ...
+          "nwjs-dev": "concurrently \"set BROWSER=none&&yarn start\" \"wait-on http://localhost:3000 &&set NWJS_START_URL=http://localhost:3000&&nw .\" ",
+          "nwjs-reactbuild": "nw .",
+          "nwjs-pack": "build --tasks win-x86,win-x64,linux-x86,linux-x64,mac-x64 --mirror https://dl.nwjs.io/ ."
+      },
+  ```
 
+- Add to gitignore:
 
+```
+# distribution
+/dist
+```
