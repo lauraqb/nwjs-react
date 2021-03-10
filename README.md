@@ -4,11 +4,11 @@
 1. Navigate to the project folder with a CLI
 2. Run the following:
    ```
-   npm install 
+   yarn
    ```
 Nota: Si hay problemas, reinstalar (?):
-- Hacer otra vez? ```npm install``` o ```yarn```
-- Instalar otra vez?  ```yarn add nw@sdk --save``` o ```yarn add nw@sdk --save```
+- Hacer otra vez? ```yarn```
+- Instalar otra vez? ```yarn add nw@sdk --save```
 
 ## Development
 ### Run
@@ -34,17 +34,17 @@ Nota: Si hay problemas, reinstalar (?):
 
 - Install:
   ```
-  npm i nw@sdk --save
+  yarn add nw@sdk --save
   ```
   ```
-  npm i concurrently --dev
+  yarn add concurrently --dev
   ```
   ```
-  npm i wait-on --dev
+  yarn add wait-on --dev
   ```
 - Install for Packaging the NW.js App
   ```
-  npm install nwjs-builder-phoenix --save-dev
+  yarn add nwjs-builder-phoenix --save-dev
   ```
 - Create a main.js file under the src directory:
 
