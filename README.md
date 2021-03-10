@@ -6,9 +6,9 @@
    ```
    npm install 
    ```
-Nota: Si hay problemas al reiniciar, volver a (?):
-- Hacer otra vez? ```npm install```
-- Instalar otra vez? ```npm install nw@sdk --save```
+Nota: Si hay problemas, reinstalar (?):
+- Hacer otra vez? ```npm install``` o ```yarn```
+- Instalar otra vez?  ```yarn add nw@sdk --save``` o ```yarn add nw@sdk --save```
 
 ## Development
 ### Run
