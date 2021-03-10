@@ -2,13 +2,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # `NW.Js`
 
-## Installation of current project
+## Set up project
 1. Navigate to the project folder with a CLI
 2. Run the following:
    ```
    npm install 
    ```
-3. Si hay problemas al reiniciar, volver a (?):
+Nota: Si hay problemas al reiniciar, volver a (?):
 - Hacer otra vez? ```npm install```
 - Instalar otra vez? ```npm install nw@sdk --save```
 
@@ -26,10 +26,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
     ```
 
 ## Packaging The NW.js App
-- Importante, haber las instrucciones del tutorial y haber instalado ```npm install nwjs-builder-phoenix --save-dev```
+- Importante, hacer las instrucciones del tutorial y haber instalado ```npm install nwjs-builder-phoenix --save-dev```
     ```bash 
      yarn nwjs-pack
     ```
+
 
 # Installation Guide
 
