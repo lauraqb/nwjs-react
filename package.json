@@ -25,9 +25,9 @@
     "eject": "react-scripts eject",
     "nwjs-dev": "concurrently \"set BROWSER=none&&yarn start\" \"wait-on http://localhost:3000 &&set NWJS_START_URL=http://localhost:3000&&nw .\" ",
     "nwjs-reactbuild": "nw .",
-    "prenwjs-reactbuild": "yarn build",
+    "nwjs-build": "yarn build",
     "nwjs-pack": "build --tasks win-x86,win-x64,linux-x86,linux-x64,mac-x64 --mirror https://dl.nwjs.io/ .",
-    "prenwjs-pack": "yarn build"
+    "nwjs-pack-win": "build --tasks win-x64 --mirror https://dl.nwjs.io/ ."
   },
   "eslintConfig": {
     "extends": "react-app"

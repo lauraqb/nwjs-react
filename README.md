@@ -17,17 +17,28 @@ Nota: Si hay problemas, reinstalar (?):
     yarn nwjs-dev 
     ```
 
-### Build
--
-    ```bash
-    yarn nwjs-reactbuild
-    ```
+### Run Production Build
+
+-   First
+```
+  yarn nwjs-build
+  ```
+-   Then
+```
+  yarn nwjs-reactbuild
+  ```
 
 ## Packaging The NW.js App
-- Importante, hacer las instrucciones del tutorial y haber instalado ```npm install nwjs-builder-phoenix --save-dev```
-    ```bash 
-     yarn nwjs-pack
-    ```
+- Recordatorio: hacer las instrucciones del tutorial y haber instalado ```npm install nwjs-builder-phoenix --save-dev```
+- Run Production Build first: ```yarn nwjs-build```
+- Only windows: 
+  ```bash
+  yarn nwjs-pack-win
+  ```
+- All OS: 
+  ```bash
+  yarn nwjs-pack
+  ```
 
 
 # Installation Guide
