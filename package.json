@@ -1,19 +1,43 @@
 {
-  "name": "nwjs-react-menorca",
+  "name": "nwjs-react-test",
   "version": "0.1.0",
   "private": true,
   "main": "./public/main.js",
-  "homepage": ".",
   "chromium-args": "--mixed-context",
-  "node-remote": "http://localhost:3000",
+  "node-remote": "*://*",
   "build": {
-    "nwVersion": "0.39.3"
+    "nwVersion": "0.52.2",
+    "outputPattern": "${NAME}-${PLATFORM}-${ARCH}",
+    "files": [
+      "public/**",
+      "build/**",
+      "src/**",
+      "node_modules/at-least-node/**",
+      "node_modules/fs-extra/**",
+      "node_modules/graceful-fs/**",
+      "node_modules/abbrev/**",
+      "node_modules/binary/**",
+      "node_modules/buffers/**",
+      "node_modules/chainsaw/**",
+      "node_modules/core-util-is/**",
+      "node_modules/debounce/**",
+      "node_modules/decompress-zip/**",
+      "node_modules/inherits/**",
+      "node_modules/isarray/**",
+      "node_modules/mkpath/**",
+      "node_modules/nopt/**",
+      "node_modules/q/**",
+      "node_modules/readable-stream/**",
+      "node_modules/string_decoder/**",
+      "node_modules/touch/**",
+      "node_modules/traverse/**"
+    ]
   },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
-    "nw": "^0.47.1-sdk",
+    "nw": "^0.52.2-sdk",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1"
@@ -25,7 +49,7 @@
     "eject": "react-scripts eject",
     "nwjs-dev": "concurrently \"set BROWSER=none&&yarn start\" \"wait-on http://localhost:3000 &&set NWJS_START_URL=http://localhost:3000&&nw .\" ",
     "nwjs-reactbuild": "nw .",
-    "nwjs-build": "yarn build",
+    "nwjs-build": "set PUBLIC_URL=/build&&yarn build",
     "nwjs-pack": "build --tasks win-x86,win-x64,linux-x86,linux-x64,mac-x64 --mirror https://dl.nwjs.io/ .",
     "nwjs-pack-win": "build --tasks win-x64 --mirror https://dl.nwjs.io/ ."
   },

@@ -7,8 +7,8 @@
    yarn
    ```
 Nota: Si hay problemas, reinstalar (?):
+- Reinstalar nw (esto actualizará a la última versión)? ```yarn add nw@sdk --save```
 - Hacer otra vez? ```yarn```
-- Instalar otra vez? ```yarn add nw@sdk --save```
 
 ## Development
 ### Run
@@ -20,17 +20,20 @@ Nota: Si hay problemas, reinstalar (?):
 ### Run Production Build
 
 -   First
-```
+  ```
   yarn nwjs-build
   ```
 -   Then
-```
+  ```
   yarn nwjs-reactbuild
   ```
 
 ## Packaging The NW.js App
-- Recordatorio: hacer las instrucciones del tutorial y haber instalado ```npm install nwjs-builder-phoenix --save-dev```
-- Run Production Build first: ```yarn nwjs-build```
+
+- Run Build first: 
+  ```
+  yarn nwjs-build
+  ```
 - Only windows: 
   ```bash
   yarn nwjs-pack-win
@@ -39,6 +42,8 @@ Nota: Si hay problemas, reinstalar (?):
   ```bash
   yarn nwjs-pack
   ```
+
+  - Recordatorio: hay que haber hecho las instrucciones del tutorial y haber instalado ```npm install nwjs-builder-phoenix --save-dev```
 
 
 # Installation Guide
