@@ -6,9 +6,8 @@
    ```
    yarn
    ```
-Nota: Si hay problemas, reinstalar (?):
-- Reinstalar nw (esto actualizará a la última versión)? ```yarn add nw@sdk --save```
-- Hacer otra vez? ```yarn```
+Note: If there are problems, try to reinstall nw:
+- ```yarn add nw@sdk --save```
 
 ## Development
 ### Run
